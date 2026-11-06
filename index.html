@@ -30,8 +30,8 @@ const items=[
 {title:'هاكاثون التعليم المفتوح',en:'Open Education Hackathon',image:'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',country:'الأردن',topic:'تعليم',fee:'مجاني',date:'2027-01-15',description:'أفكار تعليمية رقمية قابلة للتوسع.'},
 {title:'ابتكر للمستقبل',en:'Innovate for Tomorrow',image:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80',country:'مصر',topic:'استدامة',fee:'مجاني',date:'2026-12-22',description:'مشاريع تقنية للبيئة والطاقة والمجتمع.'},
 {title:'تحدي البيانات الرياضية',en:'Sports Data Challenge',image:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',country:'قطر',topic:'بيانات',fee:'مدفوع',date:'2027-02-01',description:'استخدم البيانات لبناء تجارب رياضية أفضل.'}];
-countries.forEach(function(c){var o=document.createElement('option');o.textContent=c;document.querySelector('#country').appendChild(o)});
-[...new Set(items.map(function(x){return x.topic}))].forEach(function(t){var o=document.createElement('option');o.textContent=t;document.querySelector('#topic').appendChild(o)});
+countries.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;document.querySelector('#country').appendChild(o)});
+[...new Set(items.map(function(x){return x.topic}))].forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t;document.querySelector('#topic').appendChild(o)});
 var english=false,date;function refreshDate(){date=new Intl.DateTimeFormat(english?'en-US':'ar-SA',{dateStyle:'medium'})}refreshDate();
 const countryEn={السعودية:'Saudi Arabia',الإمارات:'UAE',الأردن:'Jordan',البحرين:'Bahrain',قطر:'Qatar',الكويت:'Kuwait',عُمان:'Oman',اليمن:'Yemen',العراق:'Iraq',سوريا:'Syria',لبنان:'Lebanon',فلسطين:'Palestine',مصر:'Egypt',السودان:'Sudan',ليبيا:'Libya',تونس:'Tunisia',الجزائر:'Algeria',المغرب:'Morocco',موريتانيا:'Mauritania',الصومال:'Somalia',جيبوتي:'Djibouti','جزر القمر':'Comoros'};
 const topicEn={ 'ذكاء اصطناعي':'AI','تقنية مالية':'FinTech','تعليم':'Education','استدامة':'Sustainability','بيانات':'Data' };
